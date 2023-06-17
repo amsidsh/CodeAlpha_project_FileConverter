@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(43, 42, 42);  
+}
+
+.background{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://wallpaperset.com/w/full/8/6/0/260667.jpg);
+  opacity: 0.4;
+}
+
+.top{
+  font-family: 'Lilita One', cursive;
+  padding: 20px;
+  font-size: 50;
+  color: rgb(220, 216, 216);
+}
+
+.nav {
+  padding: 0.5rem 1rem;
+  background: rgb(131, 129, 129);
+  border-top: 1px solid rgb(102, 96, 96);
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%; 
+}
+
+.logo {
+  font-size: 1.5rem;
+  color: rgb(34, 64, 182);
+  margin-left: 1rem; 
+}
+
+.logo1{
+  font-size: 1.5rem;
+  color: rgb(182, 34, 34);
+}
+
+#convertBtn,#upload-msg,#download{
+  border: none;
+  outline: none;
+  background: rgb(24, 24, 24);
+  color: white;
+  border-radius: 0.2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+#convertBtn,#upload-msg,#download:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
+download,#convertBtn{
+  display: none;
+}
+
+
+.input-page{
+  position: relative;
+  top: 0;
+  margin-right: 60%;
+}
+
+.add-more-files{
+  width: 20vw;
+  border-radius: 3rem;
+  padding: 3rem;
+  margin:5rem auto;
+  text-align: center;
+  background: rgba(230, 230, 250, 0.13);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.inp-container{
+  cursor: pointer;
+  position: relative;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(124, 124, 145, 0.1) 0px 16px 48px;
+  height: 15rem;
+  background: rgba(154, 127, 228, 0.068);
+  width: 15rem;
+  border-radius: 30%;
+  border: 1px dashed rgba(246, 233, 233, 0.871);
+  margin: auto;
+  border-width: 0.15rem;
+}
+#upload-file {
+  opacity: 0;
+  display: block;
+  height: 16rem;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+  color: white; 
+}
+
+.img-icon{
+  color:  rgb(116, 126, 221);
+}
+
+#custom-file{
+  color: rgb(116, 126, 221);
+  position: relative;
+  top: 0.5rem;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.1rem;
+  border-radius: 0.2rem;
+  font-weight: 600;
+}
+
+span{
+  font-size: 1.45rem;
+}
+.drop{
+  margin-top: 3rem;
+  font-size: 1rem;
+  color: rgb(116, 126, 221);
+}
+
+.pdf-page{
+  z-index:-1;
+  min-height: 90%;
+  width:100%;
+  display: none;
+  overflow: hidden;
+}
+.create-pdf{
+  position: relative;
+  padding: 1rem;
+  margin: auto;
+}
+.file-item{
+  padding: 0 1rem;
+  background: none;
+  text-align: center;
+  position: relative;
+  width: 10rem;
+  height: 16rem; 
+  text-align: center;
+  margin: 1rem;
+  display: inline-block;
+  transition: 0.3s all ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.modify button{
+  padding: 0.3rem;
+  font-size: 1rem;
+  color: rgb(250, 64, 64);
+  border-radius: 50%;
+}
+.img-container{   
+  width: 8.5rem;
+  margin: auto;
+  height: 11rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#img{
+  position: relative;
+  max-width: 9rem;
+  max-height: 11rem;
+  background: white;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 0.1rem solid rgb(223, 222, 222);
+}
+.file-item button{
+  margin: 0 0.2rem;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  transition: 0.3s all ease-in-out;
+  opacity: 0;
+  padding: 0.3rem 0.5rem;
+
+}
+.file-item button:hover{
+  background: rgb(224, 248, 251);
+}
+.file-item:hover button{
+  opacity: 1;
+}
+.delete{
+  pointer-events: none;
+}
+#img-name{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 8.5rem;
+  text-align: center;
+  margin: 1rem auto;
+}
+
+.add-more-file{
+    padding: 0 1rem;
+    background: none;
+    text-align: center;
+    position: relative;
+    margin: 0.5rem;
+    display: inline-block;
+    transition: 0.3s all ease-in-out;   
+    width: 10rem;
+    height: 16rem; 
+    vertical-align: top;
+}
+ .inp-cont{
+  display: flex;
+  flex-direction: column;
+  flex-flow: column-reverse;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  border: none;
+  background: rgb(241, 246, 246); 
+  width: 9rem;
+  height: 9rem;
+  margin: 3rem auto;
+}
+#inp{
+  opacity: 0;
+  display: block;
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.create-pdf .add-more-file p{
+  position: relative;
+  top: -3.5rem;
+}
